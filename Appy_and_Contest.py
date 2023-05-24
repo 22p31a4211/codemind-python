@@ -1,19 +1,14 @@
-x=int(input())
-for i in range(0,x):
-    n,a,b,k=map(int,input().split())
-    L=0
-    if(a%b==0):
-        l=a
-    elif(b%a==0):
-        l=b
+def gcd(a,b):
+    if(b == 0):
+        return abs(a)
     else:
-        l=a*b
-    f=n//l
-    c=n//a
-    d=n//b
-    c=c-f
-    d=d-f
-    if c+d>=k:
+        return gcd(b,a%b)
+for _ in range(int(input())):
+    n,a,b,k= map(int,input().split())
+    c=gcd(a,b)
+    lcm=(a*b)//c 
+    x=n//a+n//b-2*n//lcm
+    if x>=k:
         print('Win')
     else:
         print('Lose')
