@@ -1,8 +1,8 @@
-x = int(input())
-c=0
-for i in range(1,x//2):
-    if i*(i+1)==x:
+n=int(input())
+for i in range(1,(n//2)+1):
+    if(i*(i+1)==n):
         print('YES')
-        c=1
-if c==0:
+        break
+else:
     print('NO')
+    
