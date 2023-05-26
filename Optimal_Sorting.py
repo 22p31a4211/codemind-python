@@ -1,9 +1,9 @@
 a=int(input())
 while(a):
     b=int(input())
-    s=list(map(int,input().split()))
-    b=sorted(s)
-    if(s==b):
+    c=list(map(int,input().split()))
+    b=sorted(c)
+    if(c==b):
         print(0)
     else:
         print(max(b)-min(b))
