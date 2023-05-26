@@ -1,18 +1,14 @@
-a=int(input())
-fa=0
-fb=1
-fn=fa+fb
-c=0
-for i in range(100):
-    if fa==a:
-        c=1
-        break
-    else:
-        fn=fa+fb
-        fa=fb
-        fb=fn
-        continue
-if c==1:
+x = eval(input())
+a = 0
+b = 1
+if x==0:
+    print("True")
+c = a+b
+while c<x:
+    c = a + b
+    a = b 
+    b = c
+if x==c:
     print("True")
 else:
     print("False")
